@@ -61,7 +61,7 @@ func Get(sub, as, about string) (*[]Note, error) {
 	return nil, nil
 }
 
-var configCache map[string]subConfigCache
+var configCache = make(map[string]subConfigCache)
 
 type subConfigCache struct {
 	t time.Time
