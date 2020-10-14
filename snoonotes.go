@@ -1,3 +1,6 @@
+// Package snoonotes provides an easy to use wrapper around the SnooNotes API.
+//
+// For more information about SnooNotes, see https://snoonotes.com/
 package snoonotes
 
 import (
