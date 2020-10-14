@@ -19,7 +19,7 @@ func Add(as string, note NewNote) error {
 	var r *http.Request
 	r, err = getAuthedRequest(as, "POST", "api/note", strings.NewReader(string(js)))
 	if err != nil {
-		return err
+		return errors.Wrap(err, "getting authed request failed")
 	}
 	client := http.DefaultClient
 	var resp *http.Response
